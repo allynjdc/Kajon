@@ -1,0 +1,256 @@
+#navigation{
+	background-color: white!important;
+}
+
+#navigation *{
+	color: #444;
+}
+
+#search-form-side{
+	display: flex;
+	align-items: stretch;
+	width: 100%;
+	justify-content: center;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#search-form-side > :nth-child(2){
+	padding: 0 1em;
+	height: initial;
+	background-color: white;
+	box-shadow: none;
+}
+
+#search-side{
+	width: 100%;
+	padding: 0 1em;
+	height: initial;
+	margin: 0;
+}
+
+#search-form-side i{
+	height: initial;
+	line-height: initial;
+}
+
+@media screen and (min-width: 600px) {
+	.search-bar{
+		margin: 7px 0;
+		height: 50px;
+	}
+
+	.search-bar .label-icon{
+		transform:  translate(0, 2px);
+	}
+
+	.search-bar,
+	.search-bar ul,
+	.search-bar ul li,
+	.search-bar ul li form{
+		display: flex;
+		align-items: stretch;
+	}
+
+	#search{
+		margin: 5px 0;
+		height: 40px;
+		padding-left: 0.5em;
+		width: 20em;
+		box-shadow: 0 1px 7px rgba(0, 0, 0, 0.4);
+	}
+
+	#search::placeholder{
+		color: rgba(0, 0, 0, 0.5);
+	}
+
+	#navigation .nav-wrapper{
+		display: flex;
+		align-items: stretch;
+	}
+
+	#search-form{
+		margin-left: 1em;
+	}
+}
+
+
+#navigation .material-icons.transparent{
+	color: transparent;
+	right: -2rem;
+}
+
+/* #navigation form .material-icons{
+	font-size: 1.5em;
+	transform: translate(-3px, -7px);
+} */
+
+#navigation :focus ~ .material-icons.transparent{
+	color: #444!important;
+}
+
+#navigation li{
+	height: 50px;
+}
+
+#side-navigation{
+	z-index: 3;
+}
+
+.sidenav-overlay{
+	z-index: 1;
+}
+
+#navigation .dropdown-content{
+	transform: translate(0, 65px);
+}
+
+#navigation .dropdown-content a{
+	font-size: 0.9em;
+}
+
+#navigation .dropdown-content a .material-icons{
+	font-size: 1.5em;
+	margin-right: 0.25em;
+}
+
+#navigation .dropdown-button{
+	display: flex;
+	align-items: center;
+}
+
+#navigation .dropdown-button .material-icons.right{
+	margin-left: 0;
+}
+
+#navigation .nav-img{
+	/* margin: 7px 0; */
+	/* transform: translate(0, 7px); */
+	height: 2.5em;
+	width: 2.5em;
+	border-radius: 4px;
+	margin-right: 0.5em;
+	/* border-radius:  */
+}
+
+.brand-logo img{
+	height: 1.1em;
+	width: 1.1em;
+	transform: translate(0, 0.4em);
+}
+
+@media screen and (max-width: 600px){
+	.button-collapse{
+		margin: 0!important;
+	}
+}
+
+@media screen and (min-width: 600px){
+	#navigation{
+		padding: 0 1em;
+	}
+	.brand-logo:not(.tablet){
+		font-size: 1.25em!important;
+		letter-spacing: 0.5em;
+		position: relative!important;
+		top: -7px;
+
+	}
+	.brand-logo img{
+		height: 1.5em;
+		width: 1.5em;
+		transform: translate(0, 0.25em);
+	}
+}
+
+.brand-logo:hover{
+	background-color: white;
+}
+
+#navigation .search-bar.left{
+	position: relative;
+}
+
+#navigation .icon-link a{
+	height: 64px;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	/* margin: 3px 0; */
+}
+
+/* #navigation .icon-link a:hover{
+	background-color: #ddd;
+	background-color: white;
+} */
+
+#navigation .icon-link.notif a:hover i{
+	color: #ffd736;
+}
+
+/* #navigation .icon-link.event a:hover i{
+	color: #ffb140;
+} */
+
+#navigation .icon-link.event a:hover i,
+#navigation .icon-link.home a:hover i{
+	color: #609def;
+}
+
+#search-form{
+	display: flex;
+}
+
+#search-form > button[type="submit"]{
+	color: white;
+	margin: 5px 0;
+	height: 40px;
+	border-radius: 0;
+	padding: 0 0.75em;
+	display: inline-flex;
+	align-items: stretch;
+	justify-content: center;
+}
+
+#search-form > button[type="submit"] > .material-icons{
+	height: unset;
+	line-height: unset;
+	color: white;
+}
+
+#search-form-side .material-icons{
+	transform: translate(0, 0)!important;
+}
+
+#side-navigation > :first-child{
+	height: initial;
+}
+
+#side-navigation .profile-link{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	text-align: center;
+	padding: 1em 2em 0 2em;
+	display: block;
+	height: initial;
+}
+
+#side-navigation .profile-link img{
+	height: 4em;
+	width: 4em;
+	margin: auto;
+	display: block;
+}
+
+.brand-logo.tablet{
+	display: none;
+	font-size: 1.25em!important;
+	letter-spacing: 0.5em;
+}
+
+
+@media screen and (min-width: 600px) and (max-width: 992px){
+	.brand-logo.tablet{
+		display: block;
+	}
+}

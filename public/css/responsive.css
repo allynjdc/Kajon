@@ -1,0 +1,132 @@
+.employees > *,
+.municipalities > *,
+.complied.place > *,
+.file-drawer > *,
+.employees-container > *{
+	width: 100%;
+	margin: 0.5% 0;	
+}
+
+.top-options{
+	flex-direction: column;
+	justify-content: center;
+}
+
+.drawer-header{
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	margin-top: 10px;
+}
+
+.drawer-header img{
+	margin: 0 auto 0.5em auto;
+}
+
+.collapsible-top-options{
+	display: block;
+	width: calc(100% + 1.5rem);
+	/* position: relative; */
+	/* top: calc(-0.5rem + -10px); */
+}
+
+.collapsible-top-options ~ .top-options{
+	display: none;
+}
+
+.collapsible-top-options .collapsible-body{
+	padding: 0;
+}
+
+.collapsible-top-options .top-options li > *{
+	display: block;
+	text-align: left;
+	padding: 1em;
+	border-top: 1px solid #DDD;
+}
+
+.upload-btn.mobile{
+	float: right;
+	margin: 0.6em 0.6em 0 0;
+}
+
+.upload-btn.mobile .material-icons{
+	color: white!important;
+	transform: translate(0, -20%);
+}
+
+@media screen and (min-width: 600px) {
+	.employees > *,
+	.municipalities > *,
+	.complied.place > *,
+	.file-drawer > *,
+	.employees-container > *{
+		width: 49.5%;
+		margin: 0.25%;	
+	}
+}
+
+@media screen and (min-width: 750px) {
+	.employees > *,
+	.municipalities > *,
+	.complied.place > *,
+	.file-drawer > *,
+	.employees-container > *{
+		width: 32.5%;
+		margin: 0.25%;	
+	}
+	.top-options{
+		flex-direction: row;
+		justify-content: unset;
+	}
+	#sort-label{
+		margin-left: auto;
+	}
+	.drawer-header{
+		margin: 10px 0 0 5px;
+	}
+	.collapsible-top-options{
+		display: none;
+	}
+	.collapsible-top-options ~ .top-options{
+		display: flex;
+	}
+	.form-modal {
+		max-width: 50vw;
+	}
+	.hide750{
+		display: none;
+	}
+}
+
+@media screen and (min-width: 900px) {
+	.employees > *,
+	.municipalities > *,
+	.complied.place > *,
+	.file-drawer > *,
+	.employees-container > *{
+		width: 24.5%;
+		margin: 0.25%;	
+	}
+	.drawer-header{
+		flex-direction: row;
+		justify-content: flex-start;
+	}
+	.drawer-header img{
+		margin: 0 0 0.5em 0;
+	}
+	.form-modal {
+		max-width: 40vw;
+	}
+}
+
+@media screen and (min-width: 1050px) {
+	.employees > *,
+	.municipalities > *,
+	.complied.place > *,
+	.file-drawer > *,
+	.employees-container > *{
+		width: 19.5%;
+		margin: 0.25%;	
+	}
+}

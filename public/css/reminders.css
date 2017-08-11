@@ -1,0 +1,248 @@
+.page-name .material-icons{
+	font-size: 1em;
+	color: #f15753;
+	transform: translate(0, 0.1em);
+	/* padding: 0.5em */
+}
+
+.page-name + button{
+	margin-bottom: 1em;
+}
+
+@media screen and (max-width: 600px) {
+	.page-name{
+		font-size: 2em;
+		margin: 0.25em 0;
+	}
+}
+
+@media screen and (min-width: 600px) {
+	.page-name + button{
+		margin-left: auto;
+		margin-bottom: 0;
+		margin-right: 1em;
+	}
+}
+
+.col.s12{
+	padding: 0;
+}
+
+.reminder-container{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	background-color: white;
+	/* box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); */
+	/* padding: 1em 1em 1em 1em; */
+	/* overflow: hidden; */
+}
+
+.reminder{
+	width: 100%;
+	background-color: white;
+	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+	margin: 0.25em 0;
+	padding: 1em;
+	position: relative;
+	display: flex;
+}
+
+.remider > div{
+	width: 100%;
+}
+
+.reminder .reminder-options{
+	display: flex;
+	/* width: 100%; */
+	align-items: center;
+	margin-left: auto;
+	font-size: 0.9em;
+	margin-top: 0.25em;
+}
+
+@media screen  and (min-width: 600px){
+	.reminder .reminder-options{
+		position: absolute;
+		bottom: 1em;
+		right: 1em;
+		margin-top: 0;
+	}
+}
+
+.reminder .reminder-options > *{
+	text-transform: uppercase;
+	margin: 0 0.25em 0 0;
+}
+
+.reminder .reminder-options > .btn{
+	/* font-size: 0.7em; */
+	padding: 0 0.5em;
+	height: 2.25em;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.reminder .reminder-options > .btn > .material-icons{
+	line-height: 1em;
+}
+
+/* .reminder > div > button{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	background-color: transparent;
+	border: none;
+	padding: 0;
+	height: 1.25em;
+	width: 1.25em;
+	margin: 0.75em;
+}
+
+.reminder > div > button > i.material-icons{
+	font-size: 1.25em;
+}
+
+.reminder > div > button:nth-of-type(2){
+	right: 1.5em;
+} */
+
+.reminder div:first-child > :first-child .material-icons{
+	margin-right: 0.25em;
+	/* font-size: 1em; */
+}
+
+.reminder .from{
+	/* display: inline-flex; */
+	/* flex-direction: row-reverse; */
+	/* justify-content: center; */
+	/* align-items: center; */
+	width: 100%;
+	margin: 0;
+	font-size: 0.9em;
+	color: #777;
+}
+
+@media screen and (min-width: 600px) {
+	.reminder .from{
+		padding: 0 0 0 2.5em;
+	}
+}
+
+.reminder .from img{
+	border-radius: 50%;
+	object-fit: cover;
+	object-position: center;
+	height: 1.5em;
+	width: 1.5em;
+	margin: 0 0.25em;
+	transform: translate(0, 2px);
+}
+
+.reminder .title{
+	font-weight: bold;
+	font-size: 1em;
+	color: #444;
+	margin: 0;
+	align-items: center;
+	display: block;
+	line-height: 1.5em;
+}
+
+.reminder .title .material-icons{
+	font-size: 1.5em;
+	transform: translate(0, 0.25em);
+}
+
+@media screen and (min-width: 600px){
+	.reminder .title{
+		font-size: 1.25em;
+		width: calc(100% - 80px);
+		font-weight: normal;
+		display: flex;
+	}
+}
+
+.reminder .creation{
+	font-size: 0.9em;
+	color: #888;
+	display: block;
+	margin: 0.25em 0 0 0;
+}
+
+.reminder .due{
+	color: #888;
+}
+
+@media screen and (min-width: 600px){
+	.reminder .creation{
+		position: absolute;
+		right: 1em;
+		top: 1em;
+		padding-left: 0;
+		margin: 0;
+	}
+}
+
+.filter{
+	position: relative;
+	display: flex;
+	margin: 0;
+	/* top: -1em; */
+	overflow: hidden;
+	/* background-color: #DDD; */
+	/* box-shadow: inset 0 -3px 5px rgba(0, 0, 0, 0.2);  */
+	margin-bottom: 1em;
+	background-color: rgb(245, 245, 245);
+	width: 100%;
+	box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+.filter a{
+	padding: 0.5em 1em;
+	/* border: 1px solid #DDD; */
+	background-color: #EEE;
+	border-bottom-width: 0;
+	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+	background-color: rgb(245, 245, 245);
+	/* background-color: white; */
+	margin-bottom: -1px;
+	/* border-radius: 4px 4px 0 0; */
+	/* margin: 10px 5px; */
+}
+
+.filter a.active{
+	background-color: white;
+}
+
+.filter li:first-child a{
+	margin-left: 0;
+}
+
+.filter li a{
+	display: inline-flex;
+	align-items: center;
+	padding-top: 9px;
+	color: #555;
+}
+
+.filter li a .material-icons{
+	transform: translate(0, -2px);
+	margin-right: 3px;
+}
+
+.pending{
+	color: #ffeb3b;
+}
+.late{
+	color: #ef5350;
+}
+.submitted{
+	color: #8bc34a;
+}
+.all{
+	color: #03a9f4;
+}

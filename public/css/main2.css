@@ -1,0 +1,362 @@
+.flash-message{
+
+}
+
+.download-message{
+    position: fixed;
+    z-index: 1;
+    bottom: 0;
+    right: 0;
+    padding: 1em;
+    flex-direction: column;
+}
+
+.alert{
+	width: 100%;
+	margin: 0.5em auto;
+	padding: 0.5em 1.5em 0.5em 0.5em;
+	position: relative;
+	border-radius: 4px;
+	color: white;
+	text-align: center;
+}
+
+.alert strong{
+	display: block;
+}
+
+/* @media screen and (min-width: 600px) {
+	.alert{
+		width: 33.33%;
+	}
+} */
+
+.alert-success{ background-color: #7cb342; }
+.alert-danger{ background-color: #c93a3a; }
+
+.alert .close{
+	color: white;
+	position: absolute;
+	top: 0.5em;
+	right: 0.5em;
+}
+
+#view-file{}
+
+#view-file .contributors-container{
+	display: flex;
+}
+
+#view-file .contributors-container .chip a img{
+	height: 32px;
+	width: 32px;
+	border-radius: 50%;
+	position: relative;
+	left: -12px;
+}
+
+#view-file .contributors-container .chip a{
+	display: flex;
+	align-items: center;
+	color: #666;
+}
+
+#view-file .contributors-container .chip:hover{
+	background-color: #4bafef;
+	cursor: pointer;
+	color: white;
+}
+
+#view-file .contributors-container .chip:hover a{
+	color: white;
+}
+
+#view-file .contributors-container .chip.additional:after{
+	content: "+";
+}
+
+/* #view-contributors{
+	width: 30%;
+} */
+
+#view-contributors .modal-content{
+	padding: 1em;
+}
+
+#view-contributors .modal-content > :first-child{ /* header */
+	font-size: 1.5rem;
+	text-align: center;
+	margin-bottom: 0.25em
+}
+
+#view-contributors .contributors-container{
+	margin: 0;
+	display: flex;
+	justify-content: center;
+}
+
+#view-contributors .contributors-container li{
+	width: 23%;
+	margin: 1%;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+	border-radius: 50px;
+	overflow: hidden;
+}
+
+#view-contributors .contributors-container li a{
+	display: flex;
+	align-items: center;
+	padding: 0 16px 0 0;
+	/* border-top: 1px solid #DDD; */
+}
+
+#view-contributors .contributors-container li a .contributor-name{
+	margin: 0;
+}
+
+#view-contributors .contributors-container li a:hover{
+	background-color: #46a1ef;
+}
+
+#view-contributors .contributors-container li a:hover .contributor-name{
+	color: white;
+}
+
+/* #view-contributors .contributors-container li:not(:last-child) a{
+}
+*/
+
+#view-contributors .contributor-pic{
+	height: 2.5rem;
+	width: 2.5rem;
+	border-radius: 50%;
+	margin-right: 0.5em;
+}
+
+#view-contributors .contributor-pic + *{ /* contributor-name */
+	font-size: 1rem;
+	color: #666;
+}
+
+.input-file .name{
+	text-align: center;
+	color: #444;
+	font-size: 1.5em;
+	margin: 0 0 0.25em 0;
+}
+
+#upload_message h4{
+	text-align: center;
+	/* color: #8ad32c; */
+}
+
+#upload_message p{
+	text-align: center;
+}
+
+.tag-drawer{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.tag-item{
+	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+	margin: 0.25%;
+	width: 24.5%;
+	text-overflow: ellipsis;
+}
+
+/* .tag-item a:before{
+	content: "";
+	display: inline-block;
+	border: 1em solid blue;
+	border-width: 1em 2em 1em 0;
+	border-color: transparent blue transparent transparent;
+} */
+
+.tag-item a{
+	display: inline-flex;
+	justify-content: center;
+	padding: 0.25em 0.5em 0.25em 0.25em;
+	color: #444;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.tag-item a .truncate{
+	width: 100%;
+}
+
+.tag-item a .material-icons{
+	color: #e53935;
+	padding: 0.25em;
+	font-size: 1.25em;
+} 
+
+.tag-input{
+	margin-bottom: 1em;
+}
+
+.add-tag-form{
+	display: flex;
+	align-items: stretch;
+	position: relative;
+}
+
+.add-tag-form > input{
+	width: 100%;
+	box-shadow: none;
+	background-color: white;
+	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+	height: unset;
+	margin: 0;
+	border-radius: 2px 0 0 2px;
+	padding: 0 1em;
+	border-bottom: none!important;
+}
+
+.add-tag-form > input:focus{
+	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5)!important;
+	border-color: #4999eb!important;
+}
+
+.add-tag-form > button{
+	border-radius: 0 2px 2px 0;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.tag-suggest{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	background-color: white;
+	transform: translate(0, 100%);
+	margin: 0;
+	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+	border-top: none;
+	display: flex;
+	flex-direction: column;
+	z-index: 1500;
+	display: none;
+}
+
+.tag-suggest .material-icons{
+	font-size: 1.25em;
+}
+
+.tag-suggest > li{
+	display: flex;
+	align-items: center;
+	padding: 0.25em 1em;
+	border-bottom: 1px solid #EEE;
+}
+
+#tag-suggest > li:hover{
+	background-color: rgba(0, 0, 0, 0.05);
+	cursor: pointer;
+}
+
+.selected-tag-container{
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+
+.selected-tag-container .tag-name{
+	font-size: 0.5em 1em;
+	background-color: white;
+	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+	padding: 0.5em 2em 0.55em 1em;
+	width: 100%;
+	border-radius: 2px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin: 0;
+	color: #4e8b19;
+	display: none;
+}
+
+.selected-tag-container .remove-tag{
+	font-size: 2em;
+	position: absolute;
+	color: #ee3e3e;
+	right: 0.35em;
+	/* top: 0.35em; */
+	cursor: pointer;
+	display: none;
+}
+
+.modal .footer{
+	display: flex;
+	align-items: stretch;
+	justify-content: flex-end;
+}
+
+@media screen and (max-width: 600px){
+	.modal .footer{
+		flex-wrap: wrap;
+	}
+	.modal .footer > *{
+		height: 34px;
+	}
+	.modal .footer > *.public{
+		margin: 0!important;
+		margin-bottom: 0.85em!important;
+	}
+	.modal .footer > *,
+	.modal .footer > * > *{
+		width: 100%;
+	}
+}
+
+.input-field.public{
+	display: inline-flex;
+	align-items: stretch;
+}
+
+.input-field.public label {
+	top: 0;
+	padding: 0 0.5em 0 2.5em;
+	background-color: white;
+	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+	height: unset;
+}
+
+.input-field.public label:before {
+	left: 0.5em;
+	top: 0.5em;
+	margin-top: 0;
+}
+
+.input-field.public :checked + label:before {
+	left: 0.25em;
+	top: 0.3em;
+	margin-top: 0;
+}
+
+.input-field.public + .input-field{
+	display: inline-block;
+}
+
+.input-field.public,
+.input-field.public + .input-field{
+	margin: 0;
+	margin-top: 0.25em;
+}
+
+.input-field.public{
+	margin-right: 1em;
+}
+
+.collapsible-header .material-icons{
+	transition: 0.3s;
+}
+
+.collapsible-header:not(.active) .material-icons{
+	transform: rotate(-180deg);
+}
+

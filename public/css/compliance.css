@@ -1,0 +1,251 @@
+.reminder{
+	/* box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5); */
+	margin: 1em 0 0 0;
+	align-items: center;
+	padding: 0.5em 0;
+	position: relative;
+}
+
+.reminder .from{
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	font-size: 1em;
+	color: #777;
+	display: flex;
+	align-items: center;
+}
+
+.reminder .from img{
+	border-radius: 50%;
+	object-fit: cover;
+	object-position: center;
+	height: 2em;
+	width: 2em;
+	margin: 0 0.25em;
+	transform: translate(0, 2px);
+}
+
+.reminder .title{
+	font-size: 2em;
+	color: #444;
+	margin: 0;
+	display: flex;
+	align-items: center;
+	width: calc(100% - 80px);
+}
+
+.reminder .title .material-icons{
+	font-size: 1.5em;
+}
+
+.reminder .creation{
+	position: absolute;
+	right: 1em;
+	top: 0;
+	font-size: 1em;
+	color: #888;
+}
+
+.reminder .due{
+	color: #888;
+}
+
+.incomplete{
+	color: #ffeb3b;
+}
+.overdue{
+	color: #ef5350;
+}
+.complete{
+	color: #8bc34a;
+}
+.all{
+	color: #03a9f4;
+}
+
+.employees,
+.municipalities{
+	display: flex;
+	flex-wrap: wrap;
+	padding-bottom: 0.5em;
+	margin-bottom: 0.5em;
+	/* border-bottom: 1px solid #DDD; */
+}
+
+.employees > *,
+.municipalities > *{
+	/* width: 24.5%;
+	margin: 0.25%; */
+	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+	display: flex;
+	align-items: stretch;
+	padding: 0;
+}
+
+.employees > * label,
+.municipalities > * label{
+	padding: 0.25em;
+	height: auto;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	transition: 0.3s;
+	color: #555;
+}
+
+.employees > * label img{
+	margin-right: 0.25em;
+}
+
+.employees > * label::before,
+.municipalities > * label::before{
+	position: absolute;
+	margin: 0 0.25em;
+	height: 1.5em;
+	width: 1.5em;
+	left: unset!important;
+	right: 1em;
+	top: 50%;
+	transform: translate(0, -50%);
+}
+
+.municipalities > * label::before{
+	right: 0.5em;
+}
+
+.employees > * input:checked + label,
+.municipalities > * input:checked + label{
+	background-color: #3189e4;
+	color: white;
+}
+
+.employees > * input:checked + label::before,
+.municipalities > * input:checked + label::before{
+	border-color: transparent white white transparent;
+	margin-right: 13px;
+	top: 50%;
+	transform: translate(-30%, -60%) rotate(45deg);
+}
+
+.municipalities > * input:checked + label::before{
+	right: 0.75em;
+}
+
+.municipalities:not(.form) li{
+	padding: 0.25em;
+	display: inline-flex;
+	align-items: center;
+}
+
+.municipalities > li .icon{
+	color: white;
+	height: 1.75em;
+	width: 1.75em;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 0.5em;
+	font-size: 1.75em;
+}
+
+.employees img{
+	height: 3em;
+	width: 3em;
+}
+
+.complied{
+	display: flex;
+	margin: 0 0 0 0.5em;
+}
+
+.complied > li{
+	position: relative;
+	display: inline-flex;
+	flex-direction: column; 
+	margin: 0 0.1em;
+	justify-content: center;
+}
+
+.complied > li img{
+	height: 2em;
+	width: 2em;
+	object-fit: cover;
+	object-position: center;
+	border-radius: 50%;
+}
+
+.complied:not(.place) > li .name{
+	position: absolute;
+	bottom: -1.75em;
+	left: 50%;
+	transform: translate(-50%, 0);
+	display: none;
+	background-color: #3189e4;
+	white-space: nowrap;
+	color: white;
+	border-radius: 2px;
+	z-index: 2;
+}
+
+.complied > li:hover img{
+	box-shadow: 0 0 10px #3189e4;
+}
+
+.complied > li:hover .name{
+	display: block;
+}
+
+.complied-title{
+	font-size: 1.2em;
+	margin: 0;
+}
+
+.complied-division{
+	display: flex;
+	align-items: center;
+}
+
+.row form{
+	overflow: auto;
+}
+
+.row > .col.s12{
+	padding: 0;
+}
+
+.collapsible-header.active{
+	background-color: #d6d8d9;
+	color: white;
+	border: none;
+	transition: 0.2s;
+}
+
+.collapsible-header .material-icons{
+	transition: 0.3s;
+}
+
+.collapsible-header:not(.active) .material-icons{
+	transform: rotate(-180deg);
+}
+
+.collapsible-body{
+	padding: 1em 0.5em;
+}
+
+.employees ~ button,
+.municipalities ~ button{
+	margin-left: 10px;
+}
+
+.back-to-reminders{
+	font-size: 1.5em;
+	margin-top: 2em;
+}
+
+.municipallities.form ~ button[name="accept"]{
+	float: right;
+}
+.municipallities.form ~ button[name="reject"]{
+	float: left;
+}

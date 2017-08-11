@@ -1,0 +1,17 @@
+.drawer-header{
+	flex-direction: column;
+}
+
+.drawer-header > h1{
+	width: 100%;
+	text-align: left;
+	font-size: 2em;
+	margin: 0;
+	padding-left: 0.5em;
+	/* box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5); */
+}
+
+.drawer-header > h1 .material-icons{
+	color: #e53935;
+	font-size: 1.25em;
+}
