@@ -173,12 +173,12 @@
 		</div>
 	</div>
 
-	<div class="modal delete-modal" id="block-reminder">
+	<div class="modal block-modal" id="block-reminder">
 		<div class="modal-content center">
 			<h1 class="modal-header center">Are you sure you want to deactivate this Notice?</h1>
 			<div class="btn-group-horiz">
 				<button class="btn waves-effect waves-light grey close-delete"><i class="material-icons left">cancel</i>Cancel</button>
-				<form action="/reminders/{{$reminder->id}}/inactive" >
+				<form action="" >
 					<button type="submit" class="btn waves-effect waves-light red"><i class="material-icons left">block</i>Deactivate</button>
 				</form>
 			</div>

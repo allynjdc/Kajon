@@ -380,7 +380,7 @@
 											'@if(Auth::user()->isAdmin())'+	
 												'<a class="waves-effect waves-light btn blue" href="/reminders/compliances">Manage</a>'+
 												'<button type="button" data-target="edit-reminder" class="waves-effect waves-light btn amber edit-btn" data-reminder-id="'+value["id"]+'"><i class="material-icons">edit</i></button>'+
-												'@if($reminder->active)'+
+												'@if('+value["active"]+')'+
 												'<button type="button" data-target="unblock-reminder" class="waves-effect waves-light btn orange" data-reminder-id="'+value["id"]+'"><i class="material-icons">block</i></button>'+
 												'@else'+
 												'<button type="button" data-target="block-reminder" class="waves-effect waves-light btn grey" data-reminder-id="'+value["id"]+'"><i class="material-icons">block</i></button>'+
@@ -437,7 +437,7 @@
 											'@if(Auth::user()->isAdmin())'+	
 												'<a class="waves-effect waves-light btn blue" href="/reminders/compliances">Manage</a>'+
 												'<button type="button" data-target="edit-reminder" class="waves-effect waves-light btn amber edit-btn" data-reminder-id="'+value["id"]+'"><i class="material-icons">edit</i></button>'+
-												'@if($reminder->active)'+
+												'@if('+value["active"]+')'+
 												'<button type="button" data-target="unblock-reminder" class="waves-effect waves-light btn orange" data-reminder-id="'+value["id"]+'"><i class="material-icons">block</i></button>'+
 												'@else'+
 												'<button type="button" data-target="block-reminder" class="waves-effect waves-light btn grey" data-reminder-id="'+value["id"]+'"><i class="material-icons">block</i></button>'+
@@ -495,7 +495,7 @@
 											'@if(Auth::user()->isAdmin())'+	
 												'<a class="waves-effect waves-light btn blue" href="/reminders/compliances">Manage</a>'+
 												'<button type="button" data-target="edit-reminder" class="waves-effect waves-light btn amber edit-btn" data-reminder-id="'+value["id"]+'"><i class="material-icons">edit</i></button>'+
-												'@if($reminder->active)'+
+												'@if('+value["active"]+')'+
 												'<button type="button" data-target="unblock-reminder" class="waves-effect waves-light btn orange" data-reminder-id="'+value["id"]+'"><i class="material-icons">block</i></button>'+
 												'@else'+
 												'<button type="button" data-target="block-reminder" class="waves-effect waves-light btn grey" data-reminder-id="'+value["id"]+'"><i class="material-icons">block</i></button>'+
@@ -550,7 +550,7 @@
 											'@if(Auth::user()->isAdmin())'+										
 												'<a class="waves-effect waves-light btn blue" href="/reminders/compliances">Manage</a>'+
 												'<button type="button" data-target="edit-reminder" class="waves-effect waves-light btn amber edit-btn" data-reminder-id="'+value["id"]+'"><i class="material-icons">edit</i></button>'+
-												'@if($reminder->active)'+
+												'@if('+value["active"]+')'+
 												'<button type="button" data-target="unblock-reminder" class="waves-effect waves-light btn orange" data-reminder-id="'+value["id"]+'"><i class="material-icons">block</i></button>'+
 												'@else'+
 												'<button type="button" data-target="block-reminder" class="waves-effect waves-light btn grey" data-reminder-id="'+value["id"]+'"><i class="material-icons">block</i></button>'+
